@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+}
+
+.content {
+    height: 420px;
+    width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.content .slide img {
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.slide {
+    width: 25%;
+    transition: .6s;
+    position: relative;
+}
+
+.manual__navigation {
+    position: absolute;
+    bottom: 25px;
+    left: 400px;
+    display: flex;
+}
+
+.manual__btn {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgb(144, 146, 168);
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.75s;
+}
+
+.manual__btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual__btn:hover {
+    background-color: rgb(144, 146, 168);;
+}
+
+/* A imagem movimenta para a esquerda toda vez q m botao é clicado*/
+#radio_1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio_2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio_3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio_4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation__auto div {
+    border: 3px solid black;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.75;
+}
+
+.navigation__auto {
+    position: absolute;
+    left: 400px;
+    display: flex;
+    bottom: 25px;
+}
+
+.navigation__auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+/* Deiaxr marcado a bolinha quando clica*/
+#radio_1:checked ~ .navigation__auto .auto__btn1 {
+    background-color: rgb(144, 146, 168);;
+}
+
+#radio_2:checked ~ .navigation__auto .auto__btn2 {
+    background-color: rgb(144, 146, 168);;
+}
+
+#radio_3:checked ~ .navigation__auto .auto__btn3 {
+    background-color: rgb(144, 146, 168);;
+}
+
+#radio_4:checked ~ .navigation__auto .auto__btn4 {
+    
+    background-color: rgb(144, 146, 168);;
+}
+
+
+
+
+
+
+
+
